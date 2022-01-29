@@ -1,0 +1,17 @@
+.flexbox {
+  display: flexbox;
+}
+
+mat-toolbar {
+  background-color: #e0b1cb;
+}
+.flex {
+  display: flex;
+}
+.spacer {
+  width: 100%;
+}
+
+.toolbar-menus {
+  float: right;
+}
