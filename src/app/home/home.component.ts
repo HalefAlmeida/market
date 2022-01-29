@@ -1,4 +1,6 @@
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
+import { Observable, map, shareReplay } from 'rxjs';
 
 interface Category {
   id: number;
@@ -13,6 +15,13 @@ interface Category {
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  isHandset$: Observable<boolean> = this.breakpointObserver
+    .observe(Breakpoints.Handset)
+    .pipe(
+      map((result) => result.matches),
+      shareReplay()
+    );
+
   categories: Category[] = [
     {
       id: 1,
@@ -34,7 +43,7 @@ export class HomeComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor(private breakpointObserver: BreakpointObserver) {}
 
   ngOnInit(): void {}
 }

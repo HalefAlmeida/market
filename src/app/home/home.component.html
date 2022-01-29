@@ -1,6 +1,11 @@
 <h1><b>Home</b></h1>
 
-<mat-grid-list cols="3" rowHeight="700">
+<mat-grid-list
+  cols="3"
+  rowHeight="700"
+  fixedInViewport
+  [cols]="(isHandset$ | async) ? '1' : '3'"
+>
   <mat-grid-tile mat-elevation-z8 *ngFor="let category of categories">
     <p class="item-name">
       <b>{{ category.name }}</b>
