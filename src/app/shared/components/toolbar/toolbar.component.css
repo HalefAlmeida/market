@@ -1,5 +1,5 @@
 .toolbar {
-  box-shadow: 10px 10px 5px grey;
+  box-shadow: 10px 10px 5px be95c4;
 }
 
 .flexbox {
@@ -7,7 +7,8 @@
 }
 
 mat-toolbar {
-  background-color: #e0b1cb;
+  background-color: #be95c4;
+  color: #000;
 }
 .flex {
   display: flex;
