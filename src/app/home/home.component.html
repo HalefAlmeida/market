@@ -1,0 +1,12 @@
+<h1><b>Home</b></h1>
+
+<mat-grid-list cols="3" rowHeight="700">
+  <mat-grid-tile mat-elevation-z8 *ngFor="let category of categories">
+    <p class="item-name">
+      <b>{{ category.name }}</b>
+    </p>
+    <div class="item">
+      <img class="item-image" src="{{ category.photoURL }}" alt="item photo" />
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

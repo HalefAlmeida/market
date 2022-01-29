@@ -1,0 +1,55 @@
+/* .item-name {
+  justify-content: center;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+} */
+
+mat-grid-tile {
+  background-color: azure;
+  align-items: center;
+}
+
+.item-image {
+  /* position: absolute; */
+}
+/* 
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+mat-card {
+  margin: 1.25rem;
+  width: fit-content;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+} */
+
+.item {
+  transition: 0.3s;
+  opacity: 0.6;
+}
+
+.item:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  opacity: 1;
+}
+
+.item-name {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 20pt;
+}
