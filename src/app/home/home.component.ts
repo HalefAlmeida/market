@@ -1,13 +1,7 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 import { Observable, map, shareReplay } from 'rxjs';
-
-interface Category {
-  id: number;
-  name: string;
-  status: string;
-  photoURL: string;
-}
+import { CategoryService } from '../shared/services/category.service';
 
 @Component({
   selector: 'app-home',
@@ -22,28 +16,14 @@ export class HomeComponent implements OnInit {
       shareReplay()
     );
 
-  categories: Category[] = [
-    {
-      id: 1,
-      name: 'Lacinhos',
-      status: 'A',
-      photoURL: '../../assets/images/laco.jpg',
-    },
-    {
-      id: 2,
-      name: 'Bordados',
-      status: 'A',
-      photoURL: '../../assets/images/bordado_bastidor.jpg',
-    },
-    {
-      id: 3,
-      name: 'Argila',
-      status: 'A',
-      photoURL: '../../assets/images/argila.jpg',
-    },
-  ];
+  categories$: any;
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private categoryService: CategoryService
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.categories$ = this.categoryService.readAll();
+  }
 }

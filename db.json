@@ -1,0 +1,28 @@
+{
+  "category": [
+    {
+      "id": 1,
+      "name": "Lacinhos",
+      "status": "A",
+      "photoURL": "../../assets/images/laco.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Bordados",
+      "status": "A",
+      "photoURL": "../../assets/images/bordado_bastidor.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Argila",
+      "status": "A",
+      "photoURL": "../../assets/images/argila.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Blog",
+      "status": "A",
+      "photoURL": "../../assets/images/about-owner.jpg"
+    }
+  ]
+}
