@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdministratorComponent } from './features/administrator/administrator.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
@@ -12,6 +13,11 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+  },
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./features/features.module').then((m) => m.FeaturesModule),
   },
   { path: '**', redirectTo: 'home' },
 ];
