@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, take } from 'rxjs';
 import { Category } from '../models/category';
 
 @Injectable({
@@ -11,6 +11,6 @@ export class CategoryService {
   constructor(private http: HttpClient) {}
 
   public readAll(): Observable<Category[]> {
-    return this.http.get<Category[]>(this.API_URL);
+    return this.http.get<Category[]>(this.API_URL).pipe(take(1));
   }
 }
