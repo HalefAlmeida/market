@@ -24,5 +24,14 @@
       "status": "A",
       "photoURL": "../../assets/images/about-owner.jpg"
     }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Laço rosa",
+      "photoURL": "../../assets/images/laco.jpg",
+      "categoryID": "1",
+      "status": "A"
+    }
   ]
 }

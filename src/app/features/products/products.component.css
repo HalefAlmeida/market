@@ -1,7 +1,17 @@
-.form-container {
-  justify-content: center;
+.card-image {
+  background-size: cover;
 }
 
 .flex {
   display: flex;
+}
+
+.container {
+  align-items: center;
+  flex-direction: column;
+}
+
+mat-card {
+  width: 31.25rem;
+  margin: 0.625rem;
 }

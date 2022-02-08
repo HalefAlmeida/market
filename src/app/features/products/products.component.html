@@ -1,28 +1,19 @@
 <market-back-button></market-back-button>
 
-<!-- TODO: Implementar mensagens de erro nos componentes de cadastro 
- TODO:
-Implementar handler de erros -->
-<!-- <div class="form-container flex">
-  <form [formGroup]="form" novalidate (ngSubmit)="onSubmit()">
-    <mat-form-field class="full-width">
-      <input matInput placeholder="ID" formControlName="id" />
-      <mat-error *ngIf="form.get('id').touched"
-        >{{ getErrorMessage("id") }}
-      </mat-error>
-    </mat-form-field>
-
-    <mat-form-field class="full-width">
-      <input matInput placeholder="Nome" formControlName="name" />
-      <mat-error *ngIf="form.get('name').touched"
-        >{{ getErrorMessage("name") }}
-      </mat-error>
-    </mat-form-field>
-    <button mat-fab class="button" type="submit">
-      <mat-icon>add</mat-icon>
-      Novo
-    </button>
-  </form>
-</div> -->
-
-<div class="flex"></div>
+<div class="container flex">
+  <mat-card *ngFor="let product of products$ | async">
+    <mat-card-header>
+      <div
+        mat-card-avatar
+        style="background-image: url('{{ product.photoURL }}')"
+        class="card-image"
+      ></div>
+      <mat-card-title>{{ product.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content> </mat-card-content>
+    <mat-card-actions>
+      <button mat-icon-button><mat-icon>edit</mat-icon></button>
+      <button mat-icon-button><mat-icon>delete</mat-icon></button>
+    </mat-card-actions>
+  </mat-card>
+</div>
