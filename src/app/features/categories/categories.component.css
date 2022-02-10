@@ -15,3 +15,7 @@ mat-card {
   width: 31.25rem;
   margin: 0.625rem;
 }
+
+.fab-button {
+  margin: 0.3125rem;
+}

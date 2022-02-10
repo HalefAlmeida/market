@@ -3,25 +3,25 @@
     {
       "id": 1,
       "name": "Lacinhos",
-      "status": "A",
+      "status": true,
       "photoURL": "../../assets/images/laco.jpg"
     },
     {
       "id": 2,
       "name": "Bordados",
-      "status": "A",
+      "status": true,
       "photoURL": "../../assets/images/bordado_bastidor.jpg"
     },
     {
       "id": 3,
       "name": "Argila",
-      "status": "A",
+      "status": true,
       "photoURL": "../../assets/images/argila.jpg"
     },
     {
       "id": 4,
       "name": "Blog",
-      "status": "A",
+      "status": false,
       "photoURL": "../../assets/images/about-owner.jpg"
     }
   ],
@@ -31,7 +31,7 @@
       "name": "Laço rosa",
       "photoURL": "../../assets/images/laco.jpg",
       "categoryID": "1",
-      "status": "A"
+      "status": true
     }
   ]
 }

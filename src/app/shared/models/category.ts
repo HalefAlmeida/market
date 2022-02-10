@@ -1,6 +1,6 @@
 export interface Category {
   id: number;
   name: string;
-  status: string;
+  status: boolean;
   photoURL: string;
 }

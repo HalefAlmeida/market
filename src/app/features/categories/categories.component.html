@@ -1,5 +1,14 @@
-<h1>Categorias</h1>
-<market-back-button></market-back-button>
+<div><market-back-button></market-back-button></div>
+<div>
+  <h1>Categorias</h1>
+
+  <button class="fab-button" mat-fab color="secondary">
+    <mat-icon>refresh</mat-icon>
+  </button>
+  <button class="fab-button" mat-fab color="primary">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
 
 <div class="container flex">
   <mat-card *ngFor="let category of categories$ | async">
@@ -10,6 +19,10 @@
         class="card-image"
       ></div>
       <mat-card-title>{{ category.name }}</mat-card-title>
+      <mat-slide-toggle
+        [checked]="category.status"
+        (toggleChange)="updateCategoryStatus(category)"
+      ></mat-slide-toggle>
     </mat-card-header>
     <mat-card-content> </mat-card-content>
     <mat-card-actions>

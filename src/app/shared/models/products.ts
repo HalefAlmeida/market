@@ -5,5 +5,5 @@ export interface Product {
   name: string;
   photoURL: string;
   categoryID: string;
-  status: string;
+  status: boolean;
 }

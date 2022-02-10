@@ -5,8 +5,12 @@
     <button mat-button color="primary" (click)="navigateTo('/home')">
       Home
     </button>
-    <button mat-button color="secondary">Blog</button>
-    <button mat-button color="secondary">Sobre</button>
+    <button mat-button color="secondary" (click)="navigateTo('/blog')">
+      Blog
+    </button>
+    <button mat-button color="secondary" (click)="navigateTo('/about')">
+      Sobre
+    </button>
     <button mat-button color="secondary" (click)="navigateTo('/admin')">
       Administrar
     </button>

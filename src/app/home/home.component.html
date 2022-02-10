@@ -4,14 +4,19 @@
   cols="3"
   rowHeight="700"
   fixedInViewport
-  [cols]="(isHandset$ | async) ? '1' : '4'"
+  [cols]="(isHandset$ | async) ? '1' : '3'"
+  *ngIf="!(categories$ | async); else noItems"
 >
   <mat-grid-tile mat-elevation-z8 *ngFor="let category of categories$ | async">
-    <p class="item-name">
+    <p class="item-name" *ngIf="category.status == 'A'">
       <b>{{ category.name }}</b>
     </p>
-    <div class="item">
+    <div class="item" *ngIf="category.status == 'A'">
       <img class="item-image" src="{{ category.photoURL }}" alt="item photo" />
     </div>
   </mat-grid-tile>
 </mat-grid-list>
+
+<ng-template #noItems>
+  <p>Não existem registros a serem apresentados</p>
+</ng-template>

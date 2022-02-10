@@ -11,14 +11,26 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
+    //Rota para o component Home
     path: 'home',
     component: HomeComponent,
   },
   {
+    //Rota para o componente de administração da página
     path: 'admin',
     loadChildren: () =>
       import('./features/features.module').then((m) => m.FeaturesModule),
   },
+  // { //TODO: Implementar blog da autora
+  //   path: 'blog',
+  //   // loadChildren: () =>
+  //   //   import('./features/features.module').then((m) => m.FeaturesModule),
+  // },
+  // { //TODO: Implementar sobre a autora
+  //   path: 'about',
+  //   // loadChildren: () =>
+  //   //   import('./features/features.module').then((m) => m.FeaturesModule),
+  // },
   // { path: '**', redirectTo: 'home' },
 ];
 

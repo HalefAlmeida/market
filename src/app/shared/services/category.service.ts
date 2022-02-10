@@ -14,4 +14,8 @@ export class CategoryService {
   public readAll(): Observable<Category[]> {
     return this.api.readAll(this.API_ENDPOINT);
   }
+
+  public save(record: Category) {
+    this.api.save(this.API_ENDPOINT, record);
+  }
 }
