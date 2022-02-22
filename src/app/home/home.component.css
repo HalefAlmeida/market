@@ -30,10 +30,10 @@ mat-card {
   display: flex;
   justify-content: center;
 } */
-
 .item {
   transition: 0.3s;
   opacity: 0.6;
+  margin: 10px;
 }
 
 .item:hover {

@@ -1,21 +1,40 @@
 <h1><b>Home</b></h1>
-
+<!-- 
 <mat-grid-list
   cols="3"
   rowHeight="700"
   fixedInViewport
   [cols]="(isHandset$ | async) ? '1' : '3'"
-  *ngIf="!(categories$ | async); else noItems"
+  *ngIf="categories; else noItems"
 >
-  <mat-grid-tile mat-elevation-z8 *ngFor="let category of categories$ | async">
-    <p class="item-name" *ngIf="category.status == 'A'">
+  <mat-grid-tile mat-elevation-z8 *ngFor="let category of categories">
+    <p class="item-name" *ngIf="category.status">
       <b>{{ category.name }}</b>
     </p>
-    <div class="item" *ngIf="category.status == 'A'">
+    <div class="item" *ngIf="category.status">
       <img class="item-image" src="{{ category.photoURL }}" alt="item photo" />
     </div>
   </mat-grid-tile>
-</mat-grid-list>
+</mat-grid-list> -->
+
+<div class="container">
+  <mat-grid-list cols="3" rowHeight="500">
+    <mat-grid-tile
+      *ngFor="let tile of tiles; let i = index"
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+    >
+      <div class="item" *ngIf="tile.status">
+        <a (click)="navigateTo(tile.componentURL)">
+          <p class="item-name" *ngIf="tile.status">
+            <b>{{ tile.name }}</b>
+          </p>
+          <img class="item-image" src="{{ tile.photoURL }}" alt="item photo" />
+        </a>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
 
 <ng-template #noItems>
   <p>Não existem registros a serem apresentados</p>

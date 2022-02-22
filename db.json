@@ -4,25 +4,37 @@
       "id": 1,
       "name": "Lacinhos",
       "status": true,
-      "photoURL": "../../assets/images/laco.jpg"
+      "photoURL": "../../assets/images/laco.jpg",
+      "cols": 1,
+      "rows": 1,
+      "componentURL": "/products/list"
     },
     {
       "id": 2,
       "name": "Bordados",
       "status": true,
-      "photoURL": "../../assets/images/bordado_bastidor.jpg"
+      "photoURL": "../../assets/images/bordado_bastidor.jpg",
+      "cols": 1,
+      "rows": 1,
+      "componentURL": "/products/list"
     },
     {
       "id": 3,
       "name": "Argila",
       "status": true,
-      "photoURL": "../../assets/images/argila.jpg"
+      "photoURL": "../../assets/images/argila.jpg",
+      "cols": 1,
+      "rows": 1,
+      "componentURL": "/products/list"
     },
     {
       "id": 4,
       "name": "Blog",
       "status": false,
-      "photoURL": "../../assets/images/about-owner.jpg"
+      "photoURL": "../../assets/images/about-owner.jpg",
+      "cols": 1,
+      "rows": 1,
+      "componentURL": "/products/list"
     }
   ],
   "products": [
