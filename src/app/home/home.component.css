@@ -1,35 +1,3 @@
-/* .item-name {
-  justify-content: center;
-}
-
-.image-container {
-  display: flex;
-  justify-content: center;
-} */
-
-mat-grid-tile {
-  align-items: center;
-}
-
-.item-image {
-  /* position: absolute; */
-}
-/* 
-.card-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-mat-card {
-  margin: 1.25rem;
-  width: fit-content;
-}
-
-.actions {
-  display: flex;
-  justify-content: center;
-} */
 .item {
   transition: 0.3s;
   opacity: 0.6;
