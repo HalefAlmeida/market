@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit {
         componentURL: item.componentURL,
       },
     });
-    console.log(this.tiles);
+    // console.log(this.tiles); //Pode-se utilizar este console para obter a entrada dos dados
   }
 
   public navigateTo(url: string) {
